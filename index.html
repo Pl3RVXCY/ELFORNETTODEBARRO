@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
@@ -17,28 +17,11 @@
                 extend: {
                     colors: {
                         pizza: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            200: '#fed7aa',
-                            300: '#fdba74',
-                            400: '#fb923c',
-                            500: '#ea580c',
-                            600: '#c2410c',
-                            700: '#9a3412',
-                            800: '#7c2d12',
-                            900: '#431407',
+                            50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa',
+                            300: '#fdba74', 400: '#fb923c', 500: '#ea580c',
+                            600: '#c2410c', 700: '#9a3412', 800: '#7c2d12', 900: '#431407',
                         },
-                        amberWood: {
-                            500: '#d97706',
-                            600: '#b45309',
-                            800: '#78350f',
-                            900: '#451a03',
-                        },
-                        amberGold: {
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
-                        }
+                        amberGold: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
                     },
                     fontFamily: {
                         sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
@@ -56,267 +39,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,700;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .font-serif-title {
-            font-family: 'Playfair Display', serif;
-        }
-        .glass-header {
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-        .glass-card {
-            background: rgba(24, 15, 12, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(249, 115, 22, 0.25);
-        }
-        .glow-effect {
-            box-shadow: 0 0 35px -5px rgba(234, 88, 12, 0.4);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #fb923c 0%, #ea580c 50%, #f59e0b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .pulse-border {
-            box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.6);
-            animation: pulse-ring 2s infinite;
-        }
+        body { font-family: 'Inter', sans-serif; transition: background-color 0.3s, color 0.3s; }
+        .font-serif-title { font-family: 'Playfair Display', serif; }
+        .glass-header { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+        .glass-card { background: rgba(24, 15, 12, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(249, 115, 22, 0.25); }
+        .glow-effect { box-shadow: 0 0 35px -5px rgba(234, 88, 12, 0.4); }
+        .pulse-border { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.6); animation: pulse-ring 2s infinite; }
         @keyframes pulse-ring {
             0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
             70% { box-shadow: 0 0 0 14px rgba(249, 115, 22, 0); }
             100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
         }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(234, 88, 12, 0.4);
-            border-radius: 9999px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(234, 88, 12, 0.7);
-        }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 min-h-screen flex flex-col antialiased selection:bg-pizza-500 selection:text-white">
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 min-h-screen flex flex-col antialiased">
 
     <!-- Sticky Navigation Bar -->
-    <header class="sticky top-0 z-40 w-full border-b border-stone-200/80 dark:border-stone-800/80 glass-header bg-stone-900/90 text-white transition-colors">
+    <header class="sticky top-0 z-40 w-full border-b border-stone-800 glass-header bg-stone-900/90 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 gap-3">
-                
-                <!-- Logo & Brand Name -->
-                <a href="#" class="flex items-center gap-3 shrink-0 group">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-amber-700 via-pizza-600 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-pizza-600/30 group-hover:scale-105 transition duration-300 border border-amber-400/30 shrink-0">
-                        <span class="text-xl sm:text-2xl">🍕</span>
+                <a href="#" class="flex items-center gap-3 shrink-0">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-700 via-pizza-600 to-amber-500 flex items-center justify-center text-white shadow-lg border border-amber-400/30">
+                        <span class="text-xl">🍕</span>
                     </div>
                     <div>
-                        <span class="font-serif-title text-base sm:text-xl font-black tracking-tight text-white block leading-tight whitespace-nowrap">
+                        <span class="font-serif-title text-base sm:text-xl font-black text-white block leading-tight">
                             PIZZAS <span class="text-pizza-500">ARTESANALES</span>
                         </span>
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-amber-400 block whitespace-nowrap">
-                            El Hornito de Barro &bull; Delivery Directo
-                        </span>
+                        <span class="text-[10px] uppercase font-bold text-amber-400 block">El Hornito de Barro</span>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-semibold text-stone-300 whitespace-nowrap">
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-stone-300">
                     <a href="#menu" class="hover:text-pizza-500 transition">Carta de Pizzas</a>
-                    <a href="#builder" class="hover:text-pizza-500 transition flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-pizza-500 animate-pulse shrink-0"></span>
-                        Pizza Al Gusto
-                    </a>
-                    <a href="#half-and-half" class="hover:text-pizza-500 transition flex items-center gap-1 text-amber-400">
-                        🍕 Mitad y Mitad
-                    </a>
-                    <a href="#calculadora" class="hover:text-pizza-500 transition flex items-center gap-1 text-amberGold-400">
-                        <i class="fa-solid fa-calculator text-xs"></i> Calculadora
-                    </a>
-                    <a href="#cupon-vip" class="hover:text-pizza-500 transition text-pizza-400">
-                        <i class="fa-solid fa-ticket text-xs"></i> Cupón 30% OFF
-                    </a>
+                    <a href="#cupon-vip" class="hover:text-pizza-500 transition text-pizza-400"><i class="fa-solid fa-ticket text-xs"></i> Cupón 30% OFF</a>
                 </nav>
 
-                <!-- Action Controls -->
-                <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-                    
-                    <!-- Direct WhatsApp Header Button -->
-                    <a href="https://wa.me/519936319" target="_blank" class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-xs font-extrabold hover:bg-emerald-600 hover:text-white transition whitespace-nowrap">
-                        <span>💬 WhatsApp: 993 636 319</span>
-                    </a>
-
-                    <!-- Search input -->
-                    <div class="hidden sm:relative sm:block w-32 xl:w-44">
-                        <input type="text" id="quick-search-input" onkeyup="filterBySearch()" placeholder="Buscar pizza..." 
-                               class="w-full pl-8 pr-3 py-1.5 text-xs rounded-full bg-stone-800 border border-stone-700 text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pizza-500">
-                        <svg class="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                    </div>
-
-                    <!-- Dark Mode Toggle -->
-                    <button id="theme-toggle" onclick="toggleDarkMode()" class="p-2 sm:p-2.5 rounded-xl bg-stone-800 text-stone-300 hover:text-pizza-500 transition border border-stone-700" aria-label="Cambiar Tema">
-                        <svg id="theme-icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                        </svg>
-                        <svg id="theme-icon-moon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-stone-800 text-stone-300 border border-stone-700 cursor-pointer">
+                        <i class="fa-solid fa-moon"></i>
                     </button>
 
-                    <!-- Open Cart Drawer -->
-                    <button onclick="toggleCartDrawer()" class="relative p-2.5 rounded-xl bg-pizza-500 text-white hover:bg-pizza-600 transition shadow-lg shadow-pizza-600/30 flex items-center gap-2 font-medium text-xs whitespace-nowrap cursor-pointer">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                        </svg>
+                    <button onclick="toggleCartDrawer()" class="p-2.5 rounded-xl bg-pizza-500 text-white hover:bg-pizza-600 transition flex items-center gap-2 font-medium text-xs cursor-pointer">
+                        <i class="fa-solid fa-cart-shopping"></i>
                         <span class="hidden sm:inline font-semibold">Mi Pedido</span>
                         <span id="cart-badge" class="px-2 py-0.5 rounded-full bg-stone-900 text-amber-400 font-extrabold text-xs">0</span>
                     </button>
-
-                    <!-- Mobile Hamburger Menu Button -->
-                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-stone-800 border border-stone-700 text-stone-300 hover:text-white">
-                        <i class="fa-solid fa-bars text-lg" id="menu-icon"></i>
-                    </button>
-
                 </div>
             </div>
-        </div>
-
-        <!-- Mobile Menu Container -->
-        <div id="mobile-menu" class="hidden lg:hidden border-b border-stone-800 bg-stone-950 px-6 py-6 space-y-3 text-center font-semibold text-sm">
-            <a href="#menu" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-pizza-400 py-1">Carta de Pizzas</a>
-            <a href="#builder" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-pizza-400 py-1">Pizza Al Gusto</a>
-            <a href="#half-and-half" onclick="toggleMobileMenu()" class="block text-amber-400 font-bold py-1">🍕 Mitad y Mitad</a>
-            <a href="#calculadora" onclick="toggleMobileMenu()" class="block text-amberGold-400 font-bold py-1">Calculadora de Fiestas</a>
-            <a href="#cupon-vip" onclick="toggleMobileMenu()" class="inline-block w-full py-3 rounded-xl bg-pizza-600 text-white font-bold text-xs uppercase tracking-wider">
-                Reclamar Mi Cupón 30% OFF
-            </a>
         </div>
     </header>
 
     <!-- Hero Banner -->
-    <section class="relative overflow-hidden py-12 md:py-20 bg-stone-950 text-white bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(24, 24, 27, 0.88), rgba(9, 9, 11, 0.95)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80');">
-        <div class="absolute inset-0 bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section class="py-12 bg-stone-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                
-                <!-- Left Hero Content -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pizza-500/20 text-amber-400 text-xs font-bold tracking-wide uppercase border border-pizza-500/30">
-                        <span class="w-2 h-2 rounded-full bg-pizza-500 animate-ping"></span>
-                        🔥 Recién Horneadas a la Leña & Barro • Masa Madre
-                    </div>
-                    
-                    <h1 class="font-serif-title text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight">
-                        PIZZERÍA <br class="hidden sm:block">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-pizza-500 to-amber-600">
-                            EL HORNITO DE BARRO
-                        </span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-pizza-500/20 text-amber-400 text-xs font-bold uppercase border border-pizza-500/30">
+                        🔥 Recién Horneadas a la Leña & Barro
+                    </span>
+                    <h1 class="font-serif-title text-4xl sm:text-5xl font-black text-white leading-tight">
+                        PIZZERÍA EL HORNITO DE BARRO
                     </h1>
-                    
-                    <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Pizzas artesanales con el inconfundible sabor del horno a la leña. Nos ubicamos en <strong>Calle Viena 302, Urb. Santa Rosa (Mariano Melgar)</strong>. ¡Haz tu pedido directo a nuestro WhatsApp o pide con descuento!
+                    <p class="text-base text-stone-300">
+                        Pizzas artesanales con sabor auténtico. Ubicados en Calle Viena 302, Urb. Santa Rosa (Mariano Melgar).
                     </p>
-
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#menu" class="px-7 py-3.5 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-bold text-sm shadow-xl shadow-pizza-500/30 transition duration-200 transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <span>📜 Ver Carta Completa & Pedir</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/519936319" target="_blank" class="px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition shadow-lg flex items-center gap-2">
-                            <span>📲 WhatsApp Directo</span>
-                        </a>
-                    </div>
-
-                    <!-- Highlight Badges -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-stone-800 max-w-xl mx-auto lg:mx-0 text-left">
-                        <div class="p-2.5 rounded-xl bg-stone-900/80 border border-stone-800">
-                            <div class="text-xs font-extrabold text-amber-400">Personal</div>
-                            <div class="text-[11px] text-stone-400">Desde S/ 11.00</div>
-                        </div>
-                        <div class="p-2.5 rounded-xl bg-stone-900/80 border border-stone-800">
-                            <div class="text-xs font-extrabold text-amber-400">Mediana</div>
-                            <div class="text-[11px] text-stone-400">Desde S/ 25.00</div>
-                        </div>
-                        <div class="p-2.5 rounded-xl bg-stone-900/80 border border-stone-800">
-                            <div class="text-xs font-extrabold text-amber-400">Familiar</div>
-                            <div class="text-[11px] text-stone-400">Desde S/ 35.00</div>
-                        </div>
-                        <div class="p-2.5 rounded-xl bg-stone-900/80 border border-stone-800">
-                            <div class="text-xs font-extrabold text-amber-400">Grande</div>
-                            <div class="text-[11px] text-stone-400">Desde S/ 65.00</div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Right Visual Hero Graphic (Interactive size picker for Super Mega Plis) -->
-                <div class="lg:col-span-5 relative flex flex-col items-center justify-center">
-                    <div class="relative w-full max-w-md bg-stone-900/95 backdrop-blur-md p-6 rounded-3xl border border-amber-500/40 shadow-2xl space-y-4">
-                        
-                        <!-- Header Tag -->
-                        <div class="flex items-center justify-between">
-                            <span class="px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/40 text-[11px] font-black rounded-full uppercase tracking-wide flex items-center gap-1">
-                                ⭐ Especialidad de la Casa
-                            </span>
-                            <span class="text-xs text-amber-300 font-semibold">🔥 Horno a la Leña</span>
-                        </div>
-
-                        <!-- Main Featured Pizza Card Showcase -->
-                        <div class="p-5 rounded-2xl bg-gradient-to-br from-stone-950 via-amber-950/40 to-stone-950 border border-amber-500/30 flex items-center gap-4">
-                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-600 to-pizza-500 flex items-center justify-center text-4xl shadow-xl shrink-0">
-                                🍕
-                            </div>
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-md bg-stone-900/95 p-6 rounded-3xl border border-amber-500/40 shadow-2xl space-y-4">
+                        <div class="p-4 rounded-2xl bg-stone-950 border border-amber-500/30 flex items-center gap-4">
+                            <span class="text-4xl">🍕</span>
                             <div>
-                                <h3 class="text-lg font-black text-white leading-tight">SUPER MEGA PLIS</h3>
-                                <p class="text-xs text-amber-400 font-extrabold mt-0.5">¡Nuestra Pizza Más Completa (8 Ingr.)!</p>
-                                <p class="text-[11px] text-stone-300 mt-1 leading-snug">
-                                    Jamón inglés, salame, salchicha, champiñones, tocino, chorizo, cabanossi y aceituna.
-                                </p>
+                                <h3 class="text-lg font-black text-white">SUPER MEGA PLIS</h3>
+                                <p class="text-xs text-amber-400 font-bold">8 Ingredientes Especiales</p>
                             </div>
                         </div>
-
-                        <!-- Clickable Price Tiers list -->
-                        <div>
-                            <span class="text-[11px] text-stone-400 font-bold uppercase block mb-2">Selecciona un Tamaño:</span>
-                            <div class="grid grid-cols-2 gap-2 text-xs">
-                                <button type="button" onclick="selectHeroSuperSize('personal')" id="hero-btn-personal" class="hero-size-btn p-2.5 rounded-xl bg-stone-950 border border-stone-800 flex justify-between items-center hover:border-amber-500 transition text-left cursor-pointer">
-                                    <span class="text-stone-300 font-semibold">Personal:</span>
-                                    <span class="font-extrabold text-amber-400">S/ 19.00</span>
-                                </button>
-                                <button type="button" onclick="selectHeroSuperSize('mediana')" id="hero-btn-mediana" class="hero-size-btn p-2.5 rounded-xl bg-stone-950 border-2 border-pizza-500 bg-pizza-500/10 flex justify-between items-center transition text-left cursor-pointer">
-                                    <span class="text-white font-bold">Mediana:</span>
-                                    <span class="font-extrabold text-amber-400">S/ 35.00</span>
-                                </button>
-                                <button type="button" onclick="selectHeroSuperSize('familiar')" id="hero-btn-familiar" class="hero-size-btn p-2.5 rounded-xl bg-stone-950 border border-stone-800 flex justify-between items-center hover:border-amber-500 transition text-left cursor-pointer">
-                                    <span class="text-stone-300 font-semibold">Familiar:</span>
-                                    <span class="font-extrabold text-amber-400">S/ 46.00</span>
-                                </button>
-                                <button type="button" onclick="selectHeroSuperSize('grande')" id="hero-btn-grande" class="hero-size-btn p-2.5 rounded-xl bg-stone-950 border border-stone-800 flex justify-between items-center hover:border-amber-500 transition text-left cursor-pointer">
-                                    <span class="text-stone-300 font-semibold">Grande:</span>
-                                    <span class="font-extrabold text-amber-400">S/ 85.00</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Quick Add Button -->
-                        <button type="button" onclick="addHeroSuperMegaToCart()" class="w-full py-3.5 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-black text-xs uppercase tracking-wider transition shadow-lg shadow-pizza-500/30 flex items-center justify-center gap-2 cursor-pointer active:scale-95">
-                            <span id="hero-add-btn-text">🛒 Pedir Super Mega Plis (Mediana - S/ 35.00)</span>
+                        <button type="button" onclick="addHeroSuperMegaToCart()" class="w-full py-3.5 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-black text-xs uppercase transition cursor-pointer">
+                            🛒 Pedir Super Mega Plis (Mediana - S/ 35.00)
                         </button>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -325,712 +128,221 @@
     <section id="cupon-vip" class="py-16 bg-stone-900 border-t border-stone-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                
-                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
-                    <span class="px-3 py-1 rounded-full bg-pizza-500/20 text-pizza-300 text-xs font-bold uppercase tracking-widest border border-pizza-400/30">
-                        <i class="fa-solid fa-gift text-amberGold-400"></i> Club de Amantes de la Pizza
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-                        Obtén Tu Cupón VIP de 30% OFF en Tu Primer Pedido
-                    </h2>
-                    <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
-                        Únete a nuestro club exclusivo. Registra tus datos y recibe al instante tu código de descuento directo a tu WhatsApp para usarlo hoy mismo.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-stone-200 font-medium pt-2">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-pizza-400 text-base shrink-0"></i>
-                            <span>Descuento inmediato del 30%</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-pizza-400 text-base shrink-0"></i>
-                            <span>Delivery prioritario en Mariano Melgar</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-pizza-400 text-base shrink-0"></i>
-                            <span>Promociones secretas semanales</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-pizza-400 text-base shrink-0"></i>
-                            <span>Bebida gratis en tu primer combo</span>
-                        </div>
-                    </div>
+                <div class="lg:col-span-6 space-y-4">
+                    <h2 class="text-3xl font-extrabold text-white">Obtén Tu Cupón VIP de 30% OFF</h2>
+                    <p class="text-stone-300 text-sm">Completa tus datos para enviarte tu código de descuento directo a tu WhatsApp y registrar tu solicitud en Google Sheets.</p>
                 </div>
 
                 <div class="lg:col-span-6">
-                    <div class="glass-card p-6 sm:p-8 rounded-3xl relative shadow-2xl glow-effect border border-pizza-500/30">
-                        <div class="text-center space-y-2 mb-6">
-                            <h3 class="text-xl sm:text-2xl font-black text-white">
-                                Reclamar Cupón de Descuento
-                            </h3>
-                            <p class="text-xs text-stone-300">
-                                Completa el formulario para enviarte tu cupón personalizado.
-                            </p>
-                        </div>
-
+                    <div class="glass-card p-6 rounded-3xl glow-effect">
                         <form id="pizza-lead-form" onsubmit="handlePizzaRegistration(event)" class="space-y-4">
                             <div>
-                                <label for="form-name" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-1.5">
-                                    Tu Nombre <span class="text-pizza-400">*</span>
-                                </label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-500">
-                                        <i class="fa-solid fa-user text-sm"></i>
-                                    </div>
-                                    <input type="text" id="form-name" required placeholder="Ej. Camila Torres" 
-                                           class="w-full pl-10 pr-4 py-3 rounded-xl bg-stone-900/90 border border-stone-700 text-sm text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-pizza-400 focus:border-transparent transition">
-                                </div>
+                                <label class="block text-xs font-bold text-stone-300 uppercase mb-1">Tu Nombre *</label>
+                                <input type="text" id="form-name" required placeholder="Ej. Camila Torres" class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pizza-400">
                             </div>
-
                             <div>
-                                <label for="form-whatsapp" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-1.5">
-                                    WhatsApp (para el cupón) <span class="text-pizza-400">*</span>
-                                </label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-emerald-500">
-                                        <i class="fa-brands fa-whatsapp text-base"></i>
-                                    </div>
-                                    <input type="tel" id="form-whatsapp" required placeholder="Ej. +51 987 654 321" 
-                                           class="w-full pl-10 pr-4 py-3 rounded-xl bg-stone-900/90 border border-stone-700 text-sm text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-pizza-400 focus:border-transparent transition">
-                                </div>
+                                <label class="block text-xs font-bold text-stone-300 uppercase mb-1">WhatsApp *</label>
+                                <input type="tel" id="form-whatsapp" required placeholder="Ej. +51 987 654 321" class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pizza-400">
                             </div>
-
                             <div>
-                                <label for="form-email" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-1.5">
-                                    Correo Electrónico <span class="text-pizza-400">*</span>
-                                </label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-500">
-                                        <i class="fa-solid fa-envelope text-sm"></i>
-                                    </div>
-                                    <input type="email" id="form-email" required placeholder="tuemail@ejemplo.com" 
-                                           class="w-full pl-10 pr-4 py-3 rounded-xl bg-stone-900/90 border border-stone-700 text-sm text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-pizza-400 focus:border-transparent transition">
-                                </div>
+                                <label class="block text-xs font-bold text-stone-300 uppercase mb-1">Correo Electrónico *</label>
+                                <input type="email" id="form-email" required placeholder="tuemail@ejemplo.com" class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pizza-400">
                             </div>
-
                             <div>
-                                <label for="form-favorite" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-1.5">
-                                    ¿Cuál es tu pizza favorita?
-                                </label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-pizza-400">
-                                        <i class="fa-solid fa-pizza-slice text-sm"></i>
-                                    </div>
-                                    <select id="form-favorite" class="w-full pl-10 pr-4 py-3 rounded-xl bg-stone-900/90 border border-stone-700 text-sm text-stone-200 focus:outline-none focus:ring-2 focus:ring-pizza-400 transition">
-                                        <option value="Super Mega Plis">Super Mega Plis (Especialidad)</option>
-                                        <option value="Americana Familiar">Americana Familiar</option>
-                                        <option value="Hawaiana Familiar">Hawaiana Familiar</option>
-                                        <option value="Napolitana Familiar">Napolitana Familiar</option>
-                                        <option value="Vegetariana">Vegetariana Tradicional</option>
-                                    </select>
-                                </div>
+                                <label class="block text-xs font-bold text-stone-300 uppercase mb-1">Pizza Favorita</label>
+                                <select id="form-favorite" class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-sm text-stone-200 focus:outline-none focus:ring-2 focus:ring-pizza-400">
+                                    <option value="Super Mega Plis">Super Mega Plis</option>
+                                    <option value="Americana Familiar">Americana Familiar</option>
+                                    <option value="Hawaiana Familiar">Hawaiana Familiar</option>
+                                </select>
                             </div>
-
-                            <div class="flex items-start gap-2.5 pt-1">
-                                <input type="checkbox" id="form-consent" required checked class="mt-1 rounded bg-stone-900 border-stone-700 text-pizza-500 focus:ring-pizza-400">
-                                <label for="form-consent" class="text-[11px] text-stone-400 leading-tight">
-                                    Acepto unirme al Club VIP para recibir ofertas exclusivas y mi cupón del 30% OFF.
-                                </label>
-                            </div>
-
-                            <button type="submit" id="submit-btn" 
-                                    class="w-full py-4 rounded-xl bg-gradient-to-r from-pizza-500 via-pizza-600 to-amberGold-500 hover:from-pizza-400 hover:to-amberGold-400 text-white font-extrabold text-sm uppercase tracking-wider transition shadow-lg shadow-pizza-500/30 flex items-center justify-center gap-2 cursor-pointer pulse-border active:scale-98">
-                                <i class="fa-solid fa-fire"></i>
-                                <span>RECLAMAR MI 30% OFF AHORA</span>
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-pizza-500 to-amberGold-500 text-white font-extrabold text-sm uppercase tracking-wider transition cursor-pointer pulse-border">
+                                RECLAMAR MI 30% OFF AHORA
                             </button>
                         </form>
-
-                        <div class="mt-4 text-center text-[10px] text-stone-400 flex items-center justify-center gap-3">
-                            <span><i class="fa-solid fa-shield-halved text-pizza-400"></i> Cupón Instantáneo</span>
-                            <span>•</span>
-                            <span><i class="fa-solid fa-truck-fast text-pizza-400"></i> Envío Directo WhatsApp</span>
-                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Main Menu Section -->
-    <section id="menu" class="py-16 bg-stone-100 dark:bg-stone-900/60 border-y border-stone-200 dark:border-stone-800">
+    <section id="menu" class="py-16 bg-stone-100 dark:bg-stone-900/60 border-y border-stone-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="px-3.5 py-1 rounded-full bg-pizza-500/10 text-pizza-600 dark:text-pizza-400 text-xs font-bold uppercase tracking-wider">
-                    Carta Oficial • El Hornito de Barro
-                </span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-black text-stone-900 dark:text-white mt-2 mb-3">
-                    Nuestras Deliciosas Pizzas & Bebidas
-                </h2>
-                <p class="text-stone-600 dark:text-stone-300 text-sm">
-                    Selecciona el tamaño o presentación deseada en cada tarjeta y agrégala directamente a tu pedido.
-                </p>
+                <h2 class="font-serif-title text-3xl font-black text-stone-900 dark:text-white mb-3">Nuestras Deliciosas Pizzas</h2>
             </div>
-
-            <!-- Menu Category Filter Tabs -->
-            <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-4 custom-scrollbar mb-10 text-xs sm:text-sm font-semibold">
-                <button onclick="filterCategory('all')" id="cat-all" class="cat-tab px-5 py-2.5 rounded-xl bg-pizza-500 text-white shadow-md shadow-pizza-500/20 whitespace-nowrap transition cursor-pointer">
-                    🍕 Todas las Pizzas
-                </button>
-                <button onclick="filterCategory('especiales')" id="cat-especiales" class="cat-tab px-5 py-2.5 rounded-xl bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 whitespace-nowrap transition border border-stone-200 dark:border-stone-700 cursor-pointer">
-                    🔥 Especiales & Plis
-                </button>
-                <button onclick="filterCategory('clasicas')" id="cat-clasicas" class="cat-tab px-5 py-2.5 rounded-xl bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 whitespace-nowrap transition border border-stone-200 dark:border-stone-700 cursor-pointer">
-                    🥓 Clásicas & Carnes
-                </button>
-                <button onclick="filterCategory('veggie')" id="cat-veggie" class="cat-tab px-5 py-2.5 rounded-xl bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 whitespace-nowrap transition border border-stone-200 dark:border-stone-700 cursor-pointer">
-                    🌱 Veggie & Tradicional
-                </button>
-                <button onclick="filterCategory('frutas')" id="cat-frutas" class="cat-tab px-5 py-2.5 rounded-xl bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 whitespace-nowrap transition border border-stone-200 dark:border-stone-700 cursor-pointer">
-                    🍌 Pizzas Dulces
-                </button>
-                <button onclick="filterCategory('bebidas')" id="cat-bebidas" class="cat-tab px-5 py-2.5 rounded-xl bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 whitespace-nowrap transition border border-stone-200 dark:border-stone-700 cursor-pointer">
-                    🥤 Bebidas & Refrescos
-                </button>
-            </div>
-
-            <!-- Pizza Cards Grid Container -->
-            <div id="pizza-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Populated dynamically via JS -->
-            </div>
-
+            <div id="pizza-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </section>
 
-    <!-- Pizza Al Gusto Builder Section -->
-    <section id="builder" class="py-16 bg-stone-900 text-white border-t border-stone-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="px-3.5 py-1 rounded-full bg-pizza-500/20 text-pizza-400 text-xs font-bold uppercase tracking-wider border border-pizza-500/30">
-                    Crea tu Combinación
-                </span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-black text-white mt-2 mb-3">
-                    🍕 Arma Tu Pizza Al Gusto
-                </h2>
-                <p class="text-stone-300 text-sm">
-                    Selecciona tu tamaño y elige hasta 4 ingredientes frescos para armar tu pizza ideal horneada a la leña.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div class="lg:col-span-8 bg-stone-950 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-6">
-                    <div>
-                        <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">1. Selecciona el Tamaño</h3>
-                        <div class="grid grid-cols-3 gap-3">
-                            <button onclick="selectBuilderSize('personal', 19.00)" class="builder-size-btn border border-stone-800 bg-stone-900 p-3 rounded-2xl text-center hover:border-pizza-500 transition cursor-pointer">
-                                <div class="text-xs font-extrabold text-white">Personal</div>
-                                <div class="text-[11px] text-amber-400 font-bold mt-0.5">S/ 19.00</div>
-                            </button>
-                            <button onclick="selectBuilderSize('mediana', 35.00)" class="builder-size-btn border-2 border-pizza-500 bg-pizza-500/10 p-3 rounded-2xl text-center transition cursor-pointer">
-                                <div class="text-xs font-extrabold text-white">Mediana</div>
-                                <div class="text-[11px] text-amber-400 font-bold mt-0.5">S/ 35.00</div>
-                            </button>
-                            <button onclick="selectBuilderSize('familiar', 45.00)" class="builder-size-btn border border-stone-800 bg-stone-900 p-3 rounded-2xl text-center hover:border-pizza-500 transition cursor-pointer">
-                                <div class="text-xs font-extrabold text-white">Familiar</div>
-                                <div class="text-[11px] text-amber-400 font-bold mt-0.5">S/ 45.00</div>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider">2. Elige tus Ingredientes (Máx 4)</h3>
-                            <span id="builder-count-badge" class="text-[11px] px-2.5 py-0.5 rounded-full bg-pizza-500 text-white font-extrabold">0 / 4 Seleccionados</span>
-                        </div>
-                        <div id="builder-toppings-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-4 sticky top-28 bg-stone-950 p-6 rounded-3xl border border-stone-800 shadow-2xl">
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-4 pb-2 border-b border-stone-800">
-                        Resumen Pizza Al Gusto
-                    </h3>
-                    <div class="space-y-4 mb-6">
-                        <div class="flex justify-between text-xs">
-                            <span class="text-stone-400">Tamaño:</span>
-                            <span id="summary-size" class="font-extrabold text-white capitalize">Mediana</span>
-                        </div>
-                        <div>
-                            <span class="text-stone-400 text-xs block mb-1">Ingredientes:</span>
-                            <ul id="summary-toppings-list" class="text-xs text-amber-400 font-semibold space-y-1 list-disc list-inside bg-stone-900 p-3 rounded-xl border border-stone-800">
-                                <li class="text-stone-500 italic">Marca hasta 4 ingredientes...</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between mb-6 pt-3 border-t border-stone-800">
-                        <span class="text-xs font-bold text-stone-400 uppercase">Precio Total:</span>
-                        <span id="summary-price" class="text-2xl font-black text-amber-400">S/ 35.00</span>
-                    </div>
-
-                    <button onclick="addCustomPizzaToCart()" class="w-full py-3.5 px-4 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-bold text-xs uppercase tracking-wider transition shadow-lg shadow-pizza-500/30 flex items-center justify-center gap-2 cursor-pointer active:scale-95">
-                        <span>+ Agregar Pizza Al Gusto</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pizza Mitad y Mitad Section -->
-    <section id="half-and-half" class="py-16 bg-stone-950 text-white border-t border-stone-800 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
-                    Combina 2 Especialidades
-                </span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-black text-white mt-2 mb-3">
-                    🍕 Pizzas MITAD Y MITAD
-                </h2>
-                <p class="text-stone-300 text-sm">
-                    Elige dos sabores distintos en una sola pizza. El precio se ajusta automáticamente según la combinación seleccionada.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Half Selector Controls -->
-                <div class="lg:col-span-8 space-y-6 bg-stone-900 p-6 sm:p-8 rounded-3xl border border-stone-800 shadow-xl">
-                    
-                    <!-- Step 1: Tamaño -->
-                    <div>
-                        <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-full bg-pizza-500 text-white text-xs flex items-center justify-center font-black">1</span>
-                            Selecciona el Tamaño
-                        </h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <button onclick="selectHalfSize('mediana')" id="half-size-mediana" class="half-size-btn border-2 border-pizza-500 bg-pizza-500/10 p-4 rounded-2xl text-center transition cursor-pointer">
-                                <div class="text-sm font-extrabold text-white">Mediana</div>
-                                <div class="text-xs text-amber-400 font-bold mt-1" id="half-price-tag-mediana">S/ 35.00 - 36.00</div>
-                            </button>
-                            <button onclick="selectHalfSize('familiar')" id="half-size-familiar" class="half-size-btn border border-stone-800 bg-stone-950 p-4 rounded-2xl text-center hover:border-pizza-500 transition cursor-pointer">
-                                <div class="text-sm font-extrabold text-white">Familiar</div>
-                                <div class="text-xs text-amber-400 font-bold mt-1" id="half-price-tag-familiar">S/ 45.00 - 46.00</div>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Sabores -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Primer Mitad -->
-                        <div class="bg-stone-950 p-4 rounded-2xl border border-stone-800">
-                            <h4 class="text-xs font-extrabold text-pizza-400 uppercase mb-2 flex items-center gap-1.5">
-                                🌓 Primera Mitad (Sabor 1)
-                            </h4>
-                            <select id="half-flavor-1" onchange="updateHalfAndHalfUI()" class="w-full p-3 rounded-xl bg-stone-900 border border-stone-700 text-xs text-white focus:outline-none focus:ring-2 focus:ring-pizza-500">
-                                <!-- JS Populated -->
-                            </select>
-                        </div>
-
-                        <!-- Segunda Mitad -->
-                        <div class="bg-stone-950 p-4 rounded-2xl border border-stone-800">
-                            <h4 class="text-xs font-extrabold text-pizza-400 uppercase mb-2 flex items-center gap-1.5">
-                                🌗 Segunda Mitad (Sabor 2)
-                            </h4>
-                            <select id="half-flavor-2" onchange="updateHalfAndHalfUI()" class="w-full p-3 rounded-xl bg-stone-900 border border-stone-700 text-xs text-white focus:outline-none focus:ring-2 focus:ring-pizza-500">
-                                <!-- JS Populated -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Categoría Tarifa Explanatory Badge -->
-                    <div id="half-price-explanation" class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 flex items-center justify-between">
-                        <!-- JS populated dynamic pricing description -->
-                    </div>
-
-                </div>
-
-                <!-- Right Half Order Summary Card -->
-                <div class="lg:col-span-4 sticky top-28 bg-stone-900 p-6 rounded-3xl border border-stone-800 shadow-2xl">
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-4 pb-2 border-b border-stone-800">
-                        Resumen Pizza Mitad y Mitad
-                    </h3>
-                    
-                    <div class="space-y-4 mb-6">
-                        <div class="flex justify-between text-xs">
-                            <span class="text-stone-400">Tamaño:</span>
-                            <span id="half-summary-size" class="font-extrabold text-white capitalize">Mediana</span>
-                        </div>
-                        <div class="bg-stone-950 p-3 rounded-xl border border-stone-800 space-y-2 text-xs">
-                            <div>
-                                <span class="text-stone-400 block text-[10px] uppercase">Mitad 1:</span>
-                                <span id="half-summary-flavor1" class="font-bold text-amber-400">Americana</span>
-                            </div>
-                            <div class="border-t border-stone-800 pt-1.5">
-                                <span class="text-stone-400 block text-[10px] uppercase">Mitad 2:</span>
-                                <span id="half-summary-flavor2" class="font-bold text-amber-400">Hawaiana</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between mb-6 pt-3 border-t border-stone-800">
-                        <span class="text-xs font-bold text-stone-400 uppercase">Precio Final:</span>
-                        <span id="half-summary-price" class="text-2xl font-black text-amber-400">S/ 35.00</span>
-                    </div>
-
-                    <button onclick="addHalfPizzaToCart()" class="w-full py-3.5 px-4 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-bold text-xs uppercase tracking-wider transition shadow-lg shadow-pizza-500/30 flex items-center justify-center gap-2 cursor-pointer active:scale-95">
-                        <span>+ Agregar Pizza Mitad y Mitad</span>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Pizza Calculator Section -->
-    <section id="calculadora" class="py-20 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 border-t border-stone-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                <span class="px-3.5 py-1 rounded-full bg-pizza-500/10 text-pizza-300 text-xs font-bold uppercase tracking-widest border border-pizza-500/20">
-                    Herramienta Interactiva
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-                    Calculadora de Pizzas para tu Reunión
-                </h2>
-                <p class="text-stone-400 text-sm">
-                    ¿No sabes cuántas pizzas pedir? Ajusta el número de invitados y calcula la cantidad perfecta.
-                </p>
-            </div>
-
-            <div class="glass-card p-6 sm:p-10 rounded-3xl border border-pizza-500/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
-                <!-- Inputs Side -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <label class="text-xs font-bold text-stone-300 uppercase">Número de Personas:</label>
-                            <span id="calc-people-val" class="text-sm font-extrabold text-pizza-400">8 Personas</span>
-                        </div>
-                        <input type="range" id="calc-people" min="2" max="50" step="1" value="8" oninput="calculatePartyPizzas()"
-                               class="w-full h-2 bg-stone-800 rounded-lg appearance-none cursor-pointer accent-pizza-500">
-                    </div>
-
-                    <div>
-                        <label class="text-xs font-bold text-stone-300 uppercase block mb-2">Nivel de Hambre:</label>
-                        <div class="grid grid-cols-3 gap-3">
-                            <button type="button" onclick="setAppetite('low')" id="app-low" class="app-btn p-3 rounded-xl bg-stone-900 border border-stone-800 text-xs text-stone-300 font-semibold hover:border-pizza-500 transition">
-                                🍕 Poco (2 porciones)
-                            </button>
-                            <button type="button" onclick="setAppetite('normal')" id="app-normal" class="app-btn p-3 rounded-xl bg-pizza-600 text-white font-extrabold text-xs shadow-md transition">
-                                🍕 Normal (3 porciones)
-                            </button>
-                            <button type="button" onclick="setAppetite('high')" id="app-high" class="app-btn p-3 rounded-xl bg-stone-900 border border-stone-800 text-xs text-stone-300 font-semibold hover:border-pizza-500 transition">
-                                🍕 Mucho (4 porciones)
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Results Output Side -->
-                <div class="lg:col-span-5 bg-stone-950/80 p-6 rounded-2xl border border-stone-800 text-center space-y-4">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-pizza-400">Recomendación Sugerida</span>
-                    <div class="text-4xl font-black text-white" id="calc-result-qty">3 Pizzas</div>
-                    <p class="text-xs text-stone-400 leading-relaxed" id="calc-result-desc">
-                        Sugerimos <strong>3 Pizzas Familiares</strong> para 8 personas con apetito normal.
-                    </p>
-                    <a href="#menu" class="inline-block w-full py-3 rounded-xl bg-gradient-to-r from-pizza-600 to-amberGold-500 text-white font-bold text-xs uppercase tracking-wider transition shadow-lg">
-                        Ir a Pedir al Menú
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Slide-over Cart Drawer -->
+    <!-- Cart Drawer -->
     <div id="cart-drawer-overlay" onclick="toggleCartDrawer()" class="fixed inset-0 bg-stone-950/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
     <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-stone-900 text-white z-50 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col border-l border-stone-800">
-        
-        <!-- Cart Drawer Header -->
         <div class="p-5 border-b border-stone-800 flex items-center justify-between bg-stone-950">
-            <div class="flex items-center gap-2">
-                <span class="text-xl">🛒</span>
-                <h3 class="font-bold text-base text-white">Tu Pedido</h3>
-                <span id="cart-drawer-count" class="text-xs bg-pizza-500 text-white px-2 py-0.5 rounded-full font-bold">0 ítems</span>
-            </div>
-            <button onclick="toggleCartDrawer()" class="p-2 text-stone-400 hover:text-white rounded-lg hover:bg-stone-800 transition">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
+            <h3 class="font-bold text-base text-white">Tu Pedido</h3>
+            <button onclick="toggleCartDrawer()" class="text-stone-400 hover:text-white cursor-pointer">✕</button>
         </div>
-
-        <!-- Cart Items Scrollable List -->
-        <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4 custom-scrollbar">
-            <!-- Populated via JS -->
-        </div>
-
-        <!-- Cart Drawer Footer -->
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
         <div class="p-5 border-t border-stone-800 bg-stone-950 space-y-4">
-            <div class="space-y-2 text-xs">
-                <div class="flex justify-between text-stone-400">
-                    <span>Subtotal:</span>
-                    <span id="cart-subtotal" class="font-bold text-white">S/ 0.00</span>
-                </div>
-                <div class="flex justify-between text-stone-400">
-                    <span>Costo Delivery:</span>
-                    <span class="font-bold text-emerald-400">A coordinar / Gratis</span>
-                </div>
-                <div class="flex justify-between text-sm pt-2 border-t border-stone-800 text-white font-black">
-                    <span>Total Estimado:</span>
-                    <span id="cart-total" class="text-amber-400 text-lg">S/ 0.00</span>
-                </div>
+            <div class="flex justify-between text-sm text-white font-black">
+                <span>Total Estimado:</span>
+                <span id="cart-total" class="text-amber-400 text-lg">S/ 0.00</span>
             </div>
-
-            <!-- Send Order via WhatsApp CTA Button -->
-            <button onclick="sendOrderToWhatsApp()" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2 cursor-pointer active:scale-95">
-                <span>💬 Enviar Pedido a WhatsApp</span>
+            <button onclick="sendOrderToWhatsApp()" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs uppercase tracking-wider transition cursor-pointer">
+                💬 Enviar Pedido a WhatsApp
             </button>
         </div>
-
     </aside>
 
-    <!-- Footer -->
-    <footer id="contacto" class="bg-stone-950 text-stone-400 border-t border-stone-800 py-12 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="font-serif-title text-base font-bold text-white mb-3">Pizzería El Hornito de Barro</h4>
-                    <p class="leading-relaxed text-stone-400">
-                        Pizzas artesanales horneadas a la leña con los mejores ingredientes locales e importados.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-serif-title text-base font-bold text-white mb-3">Ubicación & Contacto</h4>
-                    <p class="leading-relaxed">📍 Calle Viena 302, Urb. Santa Rosa (Mariano Melgar)</p>
-                    <p class="leading-relaxed mt-1">📲 WhatsApp Directo: +51 993 636 319</p>
-                </div>
-                <div>
-                    <h4 class="font-serif-title text-base font-bold text-white mb-3">Horario de Atención</h4>
-                    <p class="leading-relaxed">Martes a Domingo: 5:00 PM - 11:00 PM</p>
-                    <p class="leading-relaxed mt-1 text-pizza-400 font-semibold">¡Delivery a Mariano Melgar y zonas aledañas!</p>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-stone-900 text-center text-stone-600">
-                &copy; 2026 Pizzería El Hornito de Barro. Todos los derechos reservados.
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript Data Logic -->
+    <!-- JavaScript Data & Logic -->
     <script>
-        // Google Apps Script Web App Endpoint for Lead Form
+        // REEMPLAZAR ESTA URL CON TU URL DE GOOGLE APPS SCRIPT
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_ROZ82A31Qc_S6bEaR41S4oQ1nE-q4P0v6X7a8b/exec";
 
-        // Category list maps
         const ALL_PIZZAS = [
-            {
-                id: "super-mega-plis",
-                name: "SUPER MEGA PLIS",
-                category: "especiales",
-                badge: "🔥 La Más Completa",
-                desc: "8 Ingredientes: Jamón inglés, salame, salchicha, champiñones, tocino, chorizo, cabanossi y aceituna.",
-                prices: { personal: 19.00, mediana: 35.00, familiar: 46.00, grande: 85.00 }
-            },
-            {
-                id: "super-plis",
-                name: "SUPER PLIS",
-                category: "especiales",
-                badge: "⭐ Recomendada",
-                desc: "6 Ingredientes: Jamón inglés, salame, salchicha, champiñones, tocino y aceitunas.",
-                prices: { personal: 18.00, mediana: 32.00, familiar: 42.00, grande: 80.00 }
-            },
-            {
-                id: "mega-plis",
-                name: "MEGA PLIS",
-                category: "especiales",
-                badge: "🥓 Carnívora Premium",
-                desc: "6 Ingredientes: Jamón, tocino, salame, cabanossi, chorizo y aceituna negra.",
-                prices: { personal: 18.00, mediana: 32.00, familiar: 42.00, grande: 80.00 }
-            },
-            {
-                id: "plis-plis",
-                name: "PLIS PLIS",
-                category: "especiales",
-                badge: "🔥 Sabor Intenso",
-                desc: "5 Ingredientes: Tocino, champiñones, cabanossi, pimiento y aceitunas seleccionadas.",
-                prices: { personal: 17.00, mediana: 29.00, familiar: 39.00, grande: 72.00 }
-            },
-            {
-                id: "horno-barro",
-                name: "EL HORNITO DE BARRO",
-                category: "especiales",
-                badge: "👑 De la Casa",
-                desc: "Ingredientes especiales seleccionados por el maestro pizzero con extra queso fundido.",
-                prices: { personal: 18.00, mediana: 32.00, familiar: 42.00, grande: 80.00 }
-            },
-            {
-                id: "americana",
-                name: "AMERICANA",
-                category: "clasicas",
-                badge: "Clásica",
-                desc: "Salsa de tomate casera, queso mozzarella fundido y abundante jamón inglés.",
-                prices: { personal: 11.00, mediana: 25.00, familiar: 35.00, grande: 65.00 }
-            },
-            {
-                id: "hawaiana",
-                name: "HAWAIANA",
-                category: "frutas",
-                badge: "Dulce & Salado",
-                desc: "Queso mozzarella, jugosos trozos de piña seleccionada y jamón inglés especial.",
-                prices: { personal: 12.00, mediana: 26.00, familiar: 36.00, grande: 68.00 }
-            },
-            {
-                id: "pepperoni",
-                name: "PEPPERONI / SALAME",
-                category: "clasicas",
-                badge: "Favorita",
-                desc: "Salsa artesanal, doble queso mozzarella y crujientes rodajas de pepperoni / salame.",
-                prices: { personal: 13.00, mediana: 27.00, familiar: 37.00, grande: 70.00 }
-            },
-            {
-                id: "napolitana",
-                name: "NAPOLITANA",
-                category: "veggie",
-                badge: "Tradicional",
-                desc: "Tomates frescos en rodajas, orégano aromático, un toque de ajo y queso mozzarella.",
-                prices: { personal: 12.00, mediana: 25.00, familiar: 35.00, grande: 65.00 }
-            },
-            {
-                id: "vegetariana",
-                name: "VEGETARIANA",
-                category: "veggie",
-                badge: "🌱 100% Veggie",
-                desc: "Champiñones frescos, pimientos, cebolla salteada, aceitunas y rodajas de tomate.",
-                prices: { personal: 13.00, mediana: 27.00, familiar: 37.00, grande: 70.00 }
-            },
-            {
-                id: "continente",
-                name: "CONTINENTE",
-                category: "clasicas",
-                badge: "Popular",
-                desc: "Jamón inglés, champiñones frescos y pimiento dulce salteado al horno.",
-                prices: { personal: 14.00, mediana: 28.00, familiar: 38.00, grande: 72.00 }
-            },
-            {
-                id: "platano-leche",
-                name: "PLÁTANO Y LECHE NIDO",
-                category: "frutas",
-                badge: "🍌 Pizza Postre",
-                desc: "Base dulce con plátano de seda caramelizado, leche condensada y lluvia de leche Nido.",
-                prices: { personal: 12.00, mediana: 26.00, familiar: 36.00, grande: 68.00 }
-            }
+            { id: "super-mega-plis", name: "SUPER MEGA PLIS", desc: "8 Ingredientes: Jamón, salame, salchicha, champiñones, tocino, chorizo, cabanossi y aceituna.", prices: { personal: 19, mediana: 35, familiar: 46, grande: 85 } },
+            { id: "americana", name: "AMERICANA", desc: "Salsa de tomate casera, queso mozzarella fundido y abundante jamón inglés.", prices: { personal: 11, mediana: 25, familiar: 35, grande: 65 } },
+            { id: "hawaiana", name: "HAWAIANA", desc: "Queso mozzarella, jugosos trozos de piña seleccionada y jamón inglés.", prices: { personal: 12, mediana: 26, familiar: 36, grande: 68 } },
+            { id: "pepperoni", name: "PEPPERONI / SALAME", desc: "Salsa artesanal, doble queso mozzarella y crujientes rodajas de pepperoni.", prices: { personal: 13, mediana: 27, familiar: 37, grande: 70 } },
+            { id: "napolitana", name: "NAPOLITANA", desc: "Tomates frescos en rodajas, orégano aromático, un toque de ajo y queso mozzarella.", prices: { personal: 12, mediana: 25, familiar: 35, grande: 65 } }
         ];
 
-        const BEBIDAS = [
-            { id: "incakola-15l", name: "Inca Kola 1.5 Litros", category: "bebidas", desc: "Sabor nacional helado", price: 9.00 },
-            { id: "cocacola-15l", name: "Coca Cola 1.5 Litros", category: "bebidas", desc: "Refrescante helada", price: 9.00 },
-            { id: "incakola-personal", name: "Inca Kola Personal 500ml", category: "bebidas", desc: "Para acompañar tu pizza individual", price: 4.50 },
-            { id: "cocacola-personal", name: "Coca Cola Personal 500ml", category: "bebidas", desc: "Para acompañar tu pizza individual", price: 4.50 },
-            { id: "chicha-morada", name: "Chicha Morada Artesanal 1L", category: "bebidas", desc: "Preparada en casa con maíz morado y frutas", price: 8.00 }
-        ];
-
-        const TOPPINGS_LIST = [
-            "Jamón Inglés", "Salame", "Salchicha", "Tocino", "Chorizo",
-            "Cabanossi", "Champiñones", "Aceitunas Negras", "Pimiento",
-            "Tomate", "Piña", "Cebolla"
-        ];
-
-        // App state
         let cart = [];
-        let selectedCategory = 'all';
-        let heroSuperSize = 'mediana';
-        
-        // Builder state
-        let builderSize = 'mediana';
-        let builderBasePrice = 35.00;
-        let builderToppings = [];
 
-        // Half and Half state
-        let halfSize = 'mediana';
-        let halfFlavor1 = 'americana';
-        let halfFlavor2 = 'hawaiana';
-
-        // Party Calculator state
-        let appetiteLevel = 'normal';
-
-        // Initialize UI
         document.addEventListener("DOMContentLoaded", () => {
-            renderPizzaGrid(ALL_PIZZAS);
-            renderBuilderToppings();
-            populateHalfFlavorSelects();
-            updateHalfAndHalfUI();
-            calculatePartyPizzas();
+            renderPizzaGrid();
+            updateCartUI();
         });
 
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Dark mode toggle
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
         }
 
-        // Search Filter
-        function filterBySearch() {
-            const query = document.getElementById('quick-search-input').value.toLowerCase();
-            const filtered = ALL_PIZZAS.filter(p => p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
-            renderPizzaGrid(filtered);
+        function toggleCartDrawer() {
+            document.getElementById('cart-drawer-overlay').classList.toggle('opacity-0');
+            document.getElementById('cart-drawer-overlay').classList.toggle('pointer-events-none');
+            document.getElementById('cart-drawer').classList.toggle('translate-x-full');
         }
 
-        // Category Filter Tabs
-        function filterCategory(cat) {
-            selectedCategory = cat;
-            document.querySelectorAll('.cat-tab').forEach(btn => {
-                btn.classList.remove('bg-pizza-500', 'text-white');
-                btn.classList.add('bg-white', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
-            });
-            const activeBtn = document.getElementById(`cat-${cat}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-white', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
-                activeBtn.classList.add('bg-pizza-500', 'text-white');
-            }
-
-            if (cat === 'all') {
-                renderPizzaGrid(ALL_PIZZAS);
-            } else if (cat === 'bebidas') {
-                renderBebidasGrid();
-            } else {
-                const filtered = ALL_PIZZAS.filter(p => p.category === cat);
-                renderPizzaGrid(filtered);
-            }
-        }
-
-        // Render Pizzas in Grid
-        function renderPizzaGrid(list) {
+        function renderPizzaGrid() {
             const grid = document.getElementById('pizza-grid');
-            grid.innerHTML = list.map(pizza => `
-                <div class="bg-white dark:bg-stone-900 rounded-3xl p-5 border border-stone-200 dark:border-stone-800 shadow-md flex flex-col justify-between hover:border-pizza-500 transition duration-200">
+            grid.innerHTML = ALL_PIZZAS.map(p => `
+                <div class="bg-white dark:bg-stone-900 rounded-3xl p-5 border border-stone-200 dark:border-stone-800 shadow-md flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
-                                ${pizza.badge}
-                            </span>
-                            <span class="text-xs text-stone-400">🔥 Leña & Barro</span>
-                        </div>
-                        <h3 class="font-serif-title text-xl font-bold text-stone-900 dark:text-white mb-1.5">${pizza.name}</h3>
-                        <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed mb-4">${pizza.desc}</p>
+                        <h3 class="font-serif-title text-xl font-bold text-stone-900 dark:text-white mb-1">${p.name}</h3>
+                        <p class="text-xs text-stone-600 dark:text-stone-400 mb-4">${p.desc}</p>
                     </div>
+                    <div class="space-y-3 pt-3 border-t border-stone-200 dark:border-stone-800">
+                        <select id="size-${p.id}" class="w-full p-2.5 rounded-xl bg-stone-100 dark:bg-stone-950 border border-stone-700 text-xs text-stone-800 dark:text-white">
+                            <option value="personal|${p.prices.personal}">Personal - S/ ${p.prices.personal.toFixed(2)}</option>
+                            <option value="mediana|${p.prices.mediana}" selected>Mediana - S/ ${p.prices.mediana.toFixed(2)}</option>
+                            <option value="familiar|${p.prices.familiar}">Familiar - S/ ${p.prices.familiar.toFixed(2)}</option>
+                            <option value="grande|${p.prices.grande}">Grande - S/ ${p.prices.grande.toFixed(2)}</option>
+                        </select>
+                        <button onclick="addPizzaFromGrid('${p.id}')" class="w-full py-3 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-bold text-xs uppercase transition cursor-pointer">
+                            🛒 Agregar al Pedido
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
 
-                    <div class="space-y-3 pt-3 border-t border-stone-100 dark:border-stone-800">
+        function addHeroSuperMegaToCart() {
+            addToCart({ name: "Pizza SUPER MEGA PLIS (MEDIANA)", price: 35, details: "8 Ingredientes especiales" });
+        }
+
+        function addPizzaFromGrid(pizzaId) {
+            const pizza = ALL_PIZZAS.find(p => p.id === pizzaId);
+            const [size, priceStr] = document.getElementById(`size-${pizzaId}`).value.split('|');
+            addToCart({ name: `Pizza ${pizza.name} (${size.toUpperCase()})`, price: parseFloat(priceStr), details: pizza.desc });
+        }
+
+        function addToCart(item) {
+            cart.push(item);
+            updateCartUI();
+            toggleCartDrawer();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-badge').innerText = cart.length;
+            const container = document.getElementById('cart-items-container');
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-center text-xs text-stone-500 py-8">Tu carrito está vacío.</p>';
+                document.getElementById('cart-total').innerText = 'S/ 0.00';
+                return;
+            }
+
+            let total = 0;
+            container.innerHTML = cart.map((item, idx) => {
+                total += item.price;
+                return `
+                    <div class="p-3.5 rounded-2xl bg-stone-950 border border-stone-800 flex justify-between items-start">
                         <div>
-                            <label class="block text-[10px] font-bold uppercase text-stone-400 mb-1">Elegir Tamaño:</label>
-                            <select id="size-select-${pizza.id}" class="w-full p-2.5 rounded-xl bg-stone-100 dark:bg-stone-950 border border-stone-200 dark:border-stone-700 text-xs font-semibold text-stone-800 dark:text-white focus:ring-2 focus:ring-pizza-500">
-                                <option value="personal|${pizza.prices.personal}">Personal - S/ ${pizza.prices.personal.toFixed(2)}</option>
-                                <option value="mediana|${pizza.prices.mediana}" selected>Mediana - S/ ${pizza.prices.mediana.toFixed(2)}</option>
-                                <option value="familiar|${pizza.prices.familiar}">Familiar - S/ ${pizza.prices.familiar.toFixed(2)}</option>
-                                <option value="grande|${pizza.prices.grande}">Grande - S/ ${pizza.prices.grande.toFixed(2)}</option>
-                            </select>
+                            <h4 class="font-bold text-xs text-white">${item.name}</h4>
+                            <span class="text-xs font-black text-amber-400">S/ ${item.price.toFixed(2)}</span>
                         </div>
+                        <button onclick="removeFromCart(${idx})" class="text-stone-500 hover:text-red-400 text-xs cursor-pointer">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
 
-                        <button onclick="addPizzaFromGridToCart('${pizza.id}')" class="w-full py-3 rounded-xl bg-pizza-500 hover:bg-pizza-600 text-white font-bold text-xs uppercase
+            document.getElementById('cart-total').innerText = `S/ ${total.toFixed(2)}`;
+        }
+
+        function sendOrderToWhatsApp() {
+            if (cart.length === 0) {
+                alert("Agrega pizzas antes de enviar el pedido.");
+                return;
+            }
+
+            let text = "¡Hola *Pizzería El Hornito de Barro*! 🍕 Deseo realizar el siguiente pedido:\n\n";
+            let total = 0;
+
+            cart.forEach((item, i) => {
+                total += item.price;
+                text += `*${i + 1}. ${item.name}* - S/ ${item.price.toFixed(2)}\n`;
+            });
+
+            text += `\n*TOTAL: S/ ${total.toFixed(2)}*`;
+            window.open(`https://wa.me/519936319?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        async function handlePizzaRegistration(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("form-name").value.trim();
+            const whatsapp = document.getElementById("form-whatsapp").value.trim();
+            const email = document.getElementById("form-email").value.trim();
+            const favorite = document.getElementById("form-favorite").value;
+
+            try {
+                await fetch(SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({ name, whatsapp, email, favorite, timestamp: new Date().toISOString() })
+                });
+
+                alert("¡Registro exitoso! Serás redirigido a WhatsApp para reclamar tu cupón.");
+                const message = `¡Hola! Mi nombre es *${name}*. Me acabo de registrar para reclamar mi *Cupón 30% OFF* (${favorite}).`;
+                window.open(`https://wa.me/519936319?text=${encodeURIComponent(message)}`, '_blank');
+                document.getElementById("pizza-lead-form").reset();
+            } catch (err) {
+                window.open(`https://wa.me/519936319?text=Hola,%20deseo%20reclamar%20mi%20cupon%20del%2030%25%20OFF`, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
 </head>
 <body>
   <h1>Mi primera página</h1>
